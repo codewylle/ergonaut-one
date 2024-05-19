@@ -121,9 +121,9 @@
 
         service_dangerous {
             bindings = <
-&none  &none  &none       &none  &none  &none        &none  &none  &none  &none  &none  &none
-&none  &none  &sys_reset  &none  &none  &none        &none  &none  &none  &none  &none  &none
-&none  &none  &none       &none  &none  &bootloader  &none  &none  &none  &none  &none  &none
+&none  &none  &none       &none  &none  &none        &none  &none  &none       &none  &none        &none
+&none  &none  &sys_reset  &none  &none  &none        &none  &none  &sys_reset  &none  &bootloader  &none
+&none  &none  &none       &none  &none  &bootloader  &none  &none  &none       &none  &none        &none
                           &none  &none  &none        &none  &none  &none
             >;
         };
