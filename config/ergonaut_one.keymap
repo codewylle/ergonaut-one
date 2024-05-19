@@ -14,19 +14,7 @@
 &mt { quick-tap-ms = <200>; };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        service {
-            if-layers = <5 7>;
-            then-layer = <9>;
-        };
-
-        service_dangerous {
-            if-layers = <5 7 1>;
-            then-layer = <10>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     behaviors {
         mkpt: mouse_key_press_tap {
@@ -90,7 +78,7 @@
             bindings = <
 &none  &none        &kp K_CUT        &kp RIGHT  &kp UP         &kp ESC   &none          &none       &none    &kp K_PASTE  &none       &kp ESC
 &none  &kp HOME     &kp PRINTSCREEN  &none      &none          &kp DEL   &kp BACKSPACE  &kp DOWN    &kp END  &kp TAB      &none       &none
-&none  &key_repeat  &none            &none      &kp PAGE_DOWN  &kp LEFT  &none          &kp RET     &none    &key_repeat  &kp K_UNDO  &kp LS(RSHIFT)
+&none  &key_repeat  &none            &mo 9      &kp PAGE_DOWN  &kp LEFT  &none          &kp RET     &mo 9    &key_repeat  &kp K_UNDO  &kp LS(RSHIFT)
                                      &none      &kt LSHFT      &none     &none          &kt RSHIFT  &none
             >;
         };
@@ -108,7 +96,7 @@
             bindings = <
 &none  &kp C_VOL_DN  &kp K_COPY  &none           &none             &none          &none  &kp C_VOL_UP      &none      &none    &none       &none
 &none  &none         &kp LANG2   &kp SCROLLLOCK  &none             &kp C_BRI_DEC  &none  &kp KP_NUM        &kp LANG1  &kp INS  &none       &none
-&none  &none         &kp C_MENU  &kp CAPS        &kp PAGE_UP       &kp C_BRI_INC  &none  &kp K_MUTE        &none      &none    &kp K_REDO  &none
+&none  &none         &kp C_MENU  &kp CAPS        &lt 9 PAGE_UP     &kp C_BRI_INC  &none  &lt 9 K_MUTE      &none      &none    &kp K_REDO  &none
                                  &none           &kp C_PLAY_PAUSE  &none          &none  &kp C_PLAY_PAUSE  &none
             >;
         };
@@ -124,10 +112,10 @@
 
         service {
             bindings = <
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none  &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
-                                     &none          &none          &none          &none          &none          &none
+&none   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
+&mo 10  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &mo 10
+&none   &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
+                                      &none          &none          &none          &none          &none          &none
             >;
         };
 
