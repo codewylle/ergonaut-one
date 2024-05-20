@@ -12,13 +12,13 @@
 &lt {
     quick-tap-ms = <200>;
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <120>;
 };
 
 &mt {
     quick-tap-ms = <200>;
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <120>;
 };
 
 / {
@@ -30,7 +30,7 @@
             bindings = <&kp>, <&mkp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
