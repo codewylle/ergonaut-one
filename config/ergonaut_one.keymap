@@ -10,13 +10,13 @@
 #define ADJ 3
 
 &lt {
-    quick-tap-ms = <150>;
+    quick-tap-ms = <200>;
     flavor = "balanced";
     tapping-term-ms = <150>;
 };
 
 &mt {
-    quick-tap-ms = <150>;
+    quick-tap-ms = <200>;
     flavor = "balanced";
     tapping-term-ms = <150>;
 };
@@ -31,7 +31,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
             flavor = "balanced";
             label = "Mouse Key Press Tap";
         };
@@ -43,8 +43,68 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
             flavor = "balanced";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        change_lang_gh {
+            bindings = <&kp LS(RSHIFT)>;
+            key-positions = <17 18>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        change_lang_vm {
+            bindings = <&kp LS(RSHIFT)>;
+            key-positions = <28 31>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        shortcuts_c_l {
+            bindings = <&mo 7>;
+            key-positions = <3 16>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
+
+        shortcuts_c_r {
+            bindings = <&mo 7>;
+            key-positions = <8 19>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
+
+        shortcuts_m_l {
+            bindings = <&mo 9>;
+            key-positions = <3 37>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
+
+        shortcuts_m_r {
+            bindings = <&mo 9>;
+            key-positions = <8 40>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
+
+        shortcuts_cm_l {
+            bindings = <&mo 11>;
+            key-positions = <3 16 37>;
+            layers = <0>;
+            timeout-ms = <150>;
+        };
+
+        shortcuts_cm_r {
+            bindings = <&mo 11>;
+            key-positions = <8 19 40>;
+            layers = <0>;
+            timeout-ms = <150>;
         };
     };
 
