@@ -204,7 +204,7 @@
         qwerty {
             bindings = <
 &kp RBKT         &mt LCTRL Q  &lt 5 W       &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &lt 5 O       &mt RCTRL P      &kp LBKT
-&mt LCTRL GRAVE  &lt 3 A      &mt S LSHIFT  &lt 1 D         &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL SQT
+&mt LCTRL GRAVE  &lt 3 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL SQT
 &mt LSHIFT TAB   &kp Z        &kp X         &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
                                             &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
             >;
