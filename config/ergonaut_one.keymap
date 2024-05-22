@@ -114,14 +114,6 @@
             layers = <0>;
         };
 
-        stumpwm_fj {
-            bindings = <&kp LC(F)>;
-            key-positions = <16 19>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <500>;
-            layers = <0>;
-        };
-
         change_lang_ei {
             bindings = <&kp LS(RSHIFT)>;
             key-positions = <3 8>;
