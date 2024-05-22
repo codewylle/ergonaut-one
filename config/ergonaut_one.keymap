@@ -65,28 +65,28 @@
             layers = <0>;
         };
 
-        shortcuts_c_l {
+        shortcuts_c_l3 {
             bindings = <&mo 7>;
             key-positions = <3 16>;
             layers = <0>;
             timeout-ms = <150>;
         };
 
-        shortcuts_c_r {
+        shortcuts_c_r3 {
             bindings = <&mo 7>;
             key-positions = <8 19>;
             layers = <0>;
             timeout-ms = <150>;
         };
 
-        shortcuts_m_l {
+        shortcuts_m_l3 {
             bindings = <&mo 9>;
             key-positions = <3 37>;
             layers = <0>;
             timeout-ms = <150>;
         };
 
-        shortcuts_m_r {
+        shortcuts_m_r3 {
             bindings = <&mo 9>;
             key-positions = <8 40>;
             layers = <0>;
@@ -126,6 +126,34 @@
             key-positions = <38 39>;
             timeout-ms = <100>;
         };
+
+        shortcuts_c_l4 {
+            bindings = <&mo 7>;
+            key-positions = <16 2>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_c_r4 {
+            bindings = <&mo 7>;
+            key-positions = <19 9>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_m_l4 {
+            bindings = <&mo 9>;
+            key-positions = <37 2>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_m_r4 {
+            bindings = <&mo 9>;
+            key-positions = <40 9>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -133,7 +161,7 @@
 
         qwerty {
             bindings = <
-&kp RBKT         &kp Q    &kp W    &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &kp O    &kp P            &kp LBKT
+&kp RBKT         &kp Q    &lt 5 W  &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &lt 5 O  &kp P            &kp LBKT
 &mt LCTRL GRAVE  &lt 1 A  &lt 3 S  &mt LSHIFT D    &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &mt RSHIFT K    &lt 3 L  &lt 1 SEMICOLON  &mt RCTRL SQT
 &mt LSHIFT TAB   &kp Z    &kp X    &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT  &kp FSLH         &mt RSHIFT BACKSLASH
                                    &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
