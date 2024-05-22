@@ -106,6 +106,34 @@
             layers = <0>;
             timeout-ms = <150>;
         };
+
+        change_lang_ru {
+            bindings = <&kp LS(RSHIFT)>;
+            key-positions = <4 7>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        stumpwm_fj {
+            bindings = <&kp LC(F)>;
+            key-positions = <16 19>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <500>;
+            layers = <0>;
+        };
+
+        change_lang_ei {
+            bindings = <&kp LS(RSHIFT)>;
+            key-positions = <3 8>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        mouse_middle_click {
+            bindings = <&mkp MB3>;
+            key-positions = <38 39>;
+            timeout-ms = <100>;
+        };
     };
 
     keymap {
@@ -122,10 +150,10 @@
 
         qwerty_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans        &trans       &trans  &trans  &trans       &trans            &trans   &trans     &trans
+&kp TAB  &kp Z   &kp X   &mt LSHIFT C  &mt LCTRL V  &kp B   &kp N   &mt RCTRL M  &mt RSHIFT COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH
+&trans   &trans  &trans  &trans        &trans       &trans  &trans  &trans       &trans            &trans   &trans     &trans
+                         &trans        &trans       &trans  &trans  &trans       &trans
             >;
         };
 
@@ -158,10 +186,10 @@
 
         qwerty_shortcuts {
             bindings = <
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&mo 13  &mo 6  &none  &none  &mo 7  &none  &none  &mo 7  &none  &none  &mo 6  &mo 13
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                      &none  &mo 9  &none  &none  &mo 9  &none
+&none   &none  &none      &none      &none  &none  &none  &none  &none  &none  &none  &none
+&mo 13  &mo 6  &kp RC(X)  &kp RC(C)  &mo 7  &none  &none  &mo 7  &none  &none  &mo 6  &mo 13
+&none   &none  &none      &none      &none  &none  &none  &none  &none  &none  &none  &none
+                          &none      &mo 9  &none  &none  &mo 9  &none
             >;
         };
 
