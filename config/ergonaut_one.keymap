@@ -154,6 +154,48 @@
             timeout-ms = <150>;
             layers = <0>;
         };
+
+        shortcuts_c_l45 {
+            bindings = <&mo 7>;
+            key-positions = <2 1>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_c_r45 {
+            bindings = <&mo 7>;
+            key-positions = <9 10>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_cm_l4 {
+            bindings = <&mo 11>;
+            key-positions = <16 37 2>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_cm_r4 {
+            bindings = <&mo 11>;
+            key-positions = <19 40 9>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_cm_l45 {
+            bindings = <&mo 11>;
+            key-positions = <37 2 1>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
+
+        shortcuts_cm_r45 {
+            bindings = <&mo 11>;
+            key-positions = <40 9 10>;
+            timeout-ms = <150>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -161,19 +203,19 @@
 
         qwerty {
             bindings = <
-&kp RBKT         &kp Q    &lt 5 W  &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &lt 5 O  &kp P            &kp LBKT
-&mt LCTRL GRAVE  &lt 1 A  &lt 3 S  &mt LSHIFT D    &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &mt RSHIFT K    &lt 3 L  &lt 1 SEMICOLON  &mt RCTRL SQT
-&mt LSHIFT TAB   &kp Z    &kp X    &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT  &kp FSLH         &mt RSHIFT BACKSLASH
-                                   &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
+&kp RBKT         &mt LCTRL Q  &lt 5 W       &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &lt 5 O       &mt RCTRL P      &kp LBKT
+&mt LCTRL GRAVE  &lt 3 A      &mt S LSHIFT  &lt 1 D         &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL SQT
+&mt LSHIFT TAB   &kp Z        &kp X         &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
+                                            &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
             >;
         };
 
         qwerty_pushed {
             bindings = <
-&trans   &trans  &trans  &trans        &trans       &trans  &trans  &trans       &trans            &trans   &trans     &trans
-&kp TAB  &kp Z   &kp X   &mt LSHIFT C  &mt LCTRL V  &kp B   &kp N   &mt RCTRL M  &mt RSHIFT COMMA  &kp DOT  &kp SLASH  &kp BACKSLASH
-&trans   &trans  &trans  &trans        &trans       &trans  &trans  &trans       &trans            &trans   &trans     &trans
-                         &trans        &trans       &trans  &trans  &trans       &trans
+&trans   &trans  &trans        &trans  &trans       &trans  &trans  &trans       &trans     &trans          &trans     &trans
+&kp TAB  &kp Z   &mt LSHIFT X  &kp C   &mt LCTRL V  &kp B   &kp N   &mt RCTRL M  &kp COMMA  &mt RSHIFT DOT  &kp SLASH  &kp BACKSLASH
+&trans   &trans  &trans        &trans  &trans       &trans  &trans  &trans       &trans     &trans          &trans     &trans
+                               &trans  &trans       &trans  &trans  &trans       &trans
             >;
         };
 
@@ -188,10 +230,10 @@
 
         numbers {
             bindings = <
-&kp F12          &kp F1    &kp F2  &kp F3         &kp F4        &kp F5  &kp F6  &kp F7        &kp F8         &kp F9  &kp F10   &kp F11
-&mt LCTRL EQUAL  &lt 4 N1  &kp N2  &mt LSHIFT N3  &mt LCTRL N4  &kp N5  &kp N6  &mt RCTRL N7  &mt RSHIFT N8  &kp N9  &lt 4 N0  &mt RCTRL MINUS
-&kp LSHIFT       &trans    &trans  &trans         &trans        &trans  &trans  &trans        &trans         &trans  &trans    &kp RSHIFT
-                                   &trans         &trans        &trans  &trans  &trans        &trans
+&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &kp F4        &kp F5  &kp F6  &kp F7        &kp F8         &kp F9         &mt RCTRL F10  &kp F11
+&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 4 N3  &mt LCTRL N4  &kp N5  &kp N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
+&kp LSHIFT       &trans        &trans         &trans    &trans        &trans  &trans  &trans        &trans         &trans         &trans         &kp RSHIFT
+                                              &trans    &trans        &trans  &trans  &trans        &trans
             >;
         };
 
@@ -206,10 +248,10 @@
 
         qwerty_shortcuts {
             bindings = <
-&none   &none  &none      &none      &none  &none  &none  &none  &none  &none  &none  &none
-&mo 13  &mo 6  &kp RC(X)  &kp RC(C)  &mo 7  &none  &none  &mo 7  &none  &none  &mo 6  &mo 13
-&none   &none  &none      &none      &none  &none  &none  &none  &none  &none  &none  &none
-                          &none      &mo 9  &none  &none  &mo 9  &none
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&mo 13  &none  &none  &mo 6  &mo 7  &none  &none  &mo 7  &mo 6  &none  &none  &mo 13
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                      &none  &mo 9  &none  &none  &mo 9  &none
             >;
         };
 
@@ -224,37 +266,37 @@
 
         qwerty_shortcuts_c {
             bindings = <
-&none  &none        &kp C_AC_CUT     &kp RIGHT   &kp UP           &kp ESC   &none          &none             &none           &kp C_AC_PASTE  &none          &kp ESC
-&none  &lt 8 HOME   &kp PRINTSCREEN  &kp LSHIFT  &kp LCTRL        &kp DEL   &kp BACKSPACE  &mt RCTRL DOWN    &mt RSHIFT END  &kp TAB         &mo 8          &none
-&none  &key_repeat  &none            &none       &kp PAGE_DOWN    &kp LEFT  &none          &kp RET           &none           &key_repeat     &kp C_AC_UNDO  &kp LS(RSHIFT)
-                                     &kp LGUI    &ktt LALT LSHFT  &kp RALT  &kp RALT       &ktt LALT RSHIFT  &kp RGUI
+&none  &kp LCTRL    &kp C_AC_CUT            &kp RIGHT  &kp UP           &kp ESC   &none          &none             &none      &kp C_AC_PASTE  &kp RCTRL      &kp ESC
+&none  &lt 8 HOME   &mt LSHIFT PRINTSCREEN  &mo 8      &kp LCTRL        &kp DEL   &kp BACKSPACE  &mt RCTRL DOWN    &lt 8 END  &mt RSHIFT TAB  &none          &none
+&none  &key_repeat  &none                   &none      &kp PG_DN        &kp LEFT  &none          &kp RET           &none      &key_repeat     &kp C_AC_UNDO  &kp LS(RSHIFT)
+                                            &kp LGUI   &ktt LALT LSHFT  &kp RALT  &kp RALT       &ktt LALT RSHIFT  &kp RGUI
             >;
         };
 
         qwerty_shortcuts_c_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans           &trans    &trans  &trans         &trans  &trans      &trans         &trans
+&trans  &trans  &kp LSHIFT  &trans  &mt LCTRL PG_DN  &kp LEFT  &trans  &mt RCTRL RET  &trans  &kp RSHIFT  &kp C_AC_UNDO  &kp LS(RSHIFT)
+&trans  &trans  &trans      &trans  &trans           &trans    &trans  &trans         &trans  &trans      &trans         &trans
+                            &trans  &trans           &trans    &trans  &trans         &trans
             >;
         };
 
         qwerty_shortcuts_m {
             bindings = <
-&none  &kp C_VOL_DN  &kp C_AC_COPY        &none                  &none                  &none          &none     &kp C_VOL_UP           &none                       &none    &none          &none
-&none  &mo 10        &kp INTERNATIONAL_2  &mt LSHIFT SCROLLLOCK  &kp LCTRL              &kp C_BRI_DEC  &none     &mt RCTRL KP_NUM       &mt RSHIFT INTERNATIONAL_1  &kp INS  &mo 10         &none
-&none  &none         &kp C_MENU           &kp CAPS               &kp PAGE_UP            &kp C_BRI_INC  &none     &kp C_MUTE             &none                       &none    &kp C_AC_REDO  &none
-                                          &kp LGUI               &mt LALT C_PLAY_PAUSE  &kp RALT       &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
+&none  &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none              &none                  &none          &none     &kp C_VOL_UP           &none                   &none           &kp RCTRL      &none
+&none  &none               &mt LSHIFT INTERNATIONAL_2  &lt 10 SCROLLLOCK  &kp LCTRL              &kp C_BRI_DEC  &none     &mt RCTRL KP_NUM       &lt 10 INTERNATIONAL_1  &mt RSHIFT INS  &none          &none
+&none  &none               &kp C_MENU                  &kp CAPS           &kp PG_UP              &kp C_BRI_INC  &none     &kp C_MUTE             &none                   &none           &kp C_AC_REDO  &none
+                                                       &kp LGUI           &mt LALT C_PLAY_PAUSE  &kp RALT       &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
             >;
         };
 
         qwerty_shortcuts_m_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans    &trans           &trans        &trans  &trans            &trans  &trans      &trans         &trans
+&trans  &trans  &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &kp C_BRI_UP  &trans  &mt RCTRL C_MUTE  &trans  &kp RSHIFT  &kp C_AC_REDO  &trans
+&trans  &trans  &trans             &trans    &trans           &trans        &trans  &trans            &trans  &trans      &trans         &trans
+                                   &trans    &trans           &trans        &trans  &trans            &trans
             >;
         };
 
