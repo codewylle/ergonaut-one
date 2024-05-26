@@ -12,13 +12,13 @@
 &lt {
     quick-tap-ms = <200>;
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
 };
 
 &mt {
     quick-tap-ms = <200>;
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -30,7 +30,7 @@
             bindings = <&kp>, <&mkp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             label = "Mouse Key Press Tap";
@@ -42,7 +42,7 @@
             bindings = <&kp>, <&kt>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
@@ -50,6 +50,12 @@
 
     combos {
         compatible = "zmk,combos";
+
+        mouse_middle_click {
+            bindings = <&mkp MB3>;
+            key-positions = <38 39>;
+            timeout-ms = <100>;
+        };
 
         change_lang_gh {
             bindings = <&kp LS(RSHIFT)>;
@@ -63,48 +69,6 @@
             key-positions = <28 31>;
             timeout-ms = <100>;
             layers = <0>;
-        };
-
-        shortcuts_c_l3 {
-            bindings = <&mo 7>;
-            key-positions = <3 16>;
-            layers = <0>;
-            timeout-ms = <150>;
-        };
-
-        shortcuts_c_r3 {
-            bindings = <&mo 7>;
-            key-positions = <8 19>;
-            layers = <0>;
-            timeout-ms = <150>;
-        };
-
-        shortcuts_m_l3 {
-            bindings = <&mo 9>;
-            key-positions = <3 37>;
-            layers = <0>;
-            timeout-ms = <150>;
-        };
-
-        shortcuts_m_r3 {
-            bindings = <&mo 9>;
-            key-positions = <8 40>;
-            layers = <0>;
-            timeout-ms = <150>;
-        };
-
-        shortcuts_cm_l {
-            bindings = <&mo 11>;
-            key-positions = <3 16 37>;
-            layers = <0>;
-            timeout-ms = <150>;
-        };
-
-        shortcuts_cm_r {
-            bindings = <&mo 11>;
-            key-positions = <8 19 40>;
-            layers = <0>;
-            timeout-ms = <150>;
         };
 
         change_lang_ru {
@@ -121,79 +85,115 @@
             layers = <0>;
         };
 
-        mouse_middle_click {
-            bindings = <&mkp MB3>;
-            key-positions = <38 39>;
-            timeout-ms = <100>;
+        shortcuts_c_l3 {
+            bindings = <&mo 7>;
+            key-positions = <3 16>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        shortcuts_c_r3 {
+            bindings = <&mo 7>;
+            key-positions = <8 19>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        shortcuts_m_l3 {
+            bindings = <&mo 9>;
+            key-positions = <3 37>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        pshortcuts_m_r3 {
+            bindings = <&mo 9>;
+            key-positions = <8 40>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        shortcuts_cm_l {
+            bindings = <&mo 11>;
+            key-positions = <3 16 37>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        shortcuts_cm_r {
+            bindings = <&mo 11>;
+            key-positions = <8 19 40>;
+            layers = <0>;
+            timeout-ms = <200>;
         };
 
         shortcuts_c_l4 {
             bindings = <&mo 7>;
             key-positions = <16 2>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_r4 {
             bindings = <&mo 7>;
             key-positions = <19 9>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_l4 {
             bindings = <&mo 9>;
             key-positions = <37 2>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_r4 {
             bindings = <&mo 9>;
             key-positions = <40 9>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_l45 {
             bindings = <&mo 7>;
             key-positions = <2 1>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_r45 {
             bindings = <&mo 7>;
             key-positions = <9 10>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_cm_l4 {
             bindings = <&mo 11>;
             key-positions = <16 37 2>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_cm_r4 {
             bindings = <&mo 11>;
             key-positions = <19 40 9>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_cm_l45 {
             bindings = <&mo 11>;
             key-positions = <37 2 1>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_cm_r45 {
             bindings = <&mo 11>;
             key-positions = <40 9 10>;
-            timeout-ms = <150>;
+            timeout-ms = <200>;
             layers = <0>;
         };
     };
