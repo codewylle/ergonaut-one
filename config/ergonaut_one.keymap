@@ -101,70 +101,70 @@
         };
 
         shortcuts_c_l23 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <3 16>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
         shortcuts_c_r23 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <8 19>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
         shortcuts_m_l13 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <3 37>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
         pshortcuts_m_r13 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <8 40>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
         shortcuts_c_l24 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <16 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_r24 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <19 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_l14 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <37 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_r14 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <40 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_l45 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <2 1>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_r45 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <9 10>;
             timeout-ms = <200>;
             layers = <0>;
@@ -177,42 +177,42 @@
         };
 
         shortcuts_m_l23 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <3 4>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         pshortcuts_m_r23 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <8 7>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_l24 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <4 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         pshortcuts_m_r24 {
-            bindings = <&mo 9>;
+            bindings = <&mo 8>;
             key-positions = <7 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_l35 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <1 3>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_c_r35 {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <10 8>;
             timeout-ms = <200>;
             layers = <0>;
@@ -231,8 +231,8 @@
 
         qwerty {
             bindings = <
-&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 5 W       &lt 5 E         &mt LALT R      &kp T           &kp Y           &mt LALT U      &lt 5 I         &lt 5 O       &mt RCTRL P      &kp LEFT_BRACKET
-&mt LCTRL GRAVE    &lt 3 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &mt RALT G      &mt RALT H      &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL APOSTROPHE
+&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 4 W       &lt 4 E         &mt LALT R      &kp T           &kp Y           &mt LALT U      &lt 4 I         &lt 4 O       &mt RCTRL P      &kp LEFT_BRACKET
+&mt LCTRL GRAVE    &lt 2 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &mt RALT G      &mt RALT H      &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 2 SEMICOLON  &mt RCTRL APOSTROPHE
 &mt LSHIFT TAB     &kp Z        &kp X         &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
                                               &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
             >;
@@ -240,26 +240,17 @@
 
         qwerty_pushed {
             bindings = <
-&trans  &mt LCTRL TAB  &lt 6 GRAVE   &lt 6 RIGHT_BRACKET  &mt LALT T   &trans      &trans      &mt LALT Y   &lt 6 LEFT_BRACKET  &lt 6 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
-&trans  &lt 4 Z        &mt LSHIFT X  &kp C                &mt LCTRL V  &mt RALT B  &mt RALT N  &mt RCTRL M  &kp COMMA           &mt RSHIFT DOT    &lt 4 SLASH          &trans
+&trans  &mt LCTRL TAB  &lt 5 GRAVE   &lt 5 RIGHT_BRACKET  &mt LALT T   &trans      &trans      &mt LALT Y   &lt 5 LEFT_BRACKET  &lt 5 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
+&trans  &lt 3 Z        &mt LSHIFT X  &kp C                &mt LCTRL V  &mt RALT B  &mt RALT N  &mt RCTRL M  &kp COMMA           &mt RSHIFT DOT    &lt 3 SLASH          &trans
 &trans  &trans         &trans        &trans               &trans       &trans      &trans      &trans       &trans              &trans            &trans               &trans
                                      &trans               &trans       &trans      &trans      &trans       &trans
-            >;
-        };
-
-        qwerty_without_mod_taps {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         numbers {
             bindings = <
 &kp F12          &mt LCTRL F1  &kp F2         &kp F3    &mt LALT F4   &kp F5       &kp F6       &mt LALT F7   &kp F8         &kp F9         &mt RCTRL F10  &kp F11
-&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 4 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
+&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 3 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
 &kp LSHIFT       &trans        &trans         &trans    &trans        &trans       &trans       &trans        &trans         &trans         &trans         &kp RSHIFT
                                               &trans    &trans        &trans       &trans       &trans        &trans
             >;
@@ -276,26 +267,26 @@
 
         qwerty_shortcuts {
             bindings = <
-&none       &mo 7  &mo 11      &mo 11  &mo 9  &none     &none     &mo 9  &mo 11  &mo 11      &mo 7  &none
-&mo 11      &none  &kp LSHIFT  &mo 6   &mo 7  &kp RALT  &kp RALT  &mo 7  &mo 6   &kp RSHIFT  &none  &mo 11
+&none       &mo 6  &mo 10      &mo 10  &mo 8  &none     &none     &mo 8  &mo 10  &mo 10      &mo 6  &none
+&mo 10      &none  &kp LSHIFT  &mo 5   &mo 6  &kp RALT  &kp RALT  &mo 6  &mo 5   &kp RSHIFT  &none  &mo 10
 &kp LSHIFT  &none  &none       &none   &none  &none     &none     &none  &none   &none       &none  &kp RSHIFT
-                               &none   &mo 9  &none     &none     &mo 9  &none
+                               &none   &mo 8  &none     &none     &mo 8  &none
             >;
         };
 
         qwerty_shortcuts_pushed {
             bindings = <
-&trans  &mo 8   &none       &none   &mo 10  &trans    &trans    &mo 10  &none   &none       &mo 8   &trans
-&trans  &none   &kp LSHIFT  &none   &mo 8   &kp RALT  &kp RALT  &mo 8   &none   &kp RSHIFT  &none   &trans
+&trans  &mo 7   &none       &none   &mo 9   &trans    &trans    &mo 9   &none   &none       &mo 7   &trans
+&trans  &none   &kp LSHIFT  &none   &mo 7   &kp RALT  &kp RALT  &mo 7   &none   &kp RSHIFT  &none   &trans
 &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans  &trans      &trans  &trans
-                            &trans  &mo 10  &trans    &trans    &mo 10  &trans
+                            &trans  &mo 9   &trans    &trans    &mo 9   &trans
             >;
         };
 
         qwerty_shortcuts_c {
             bindings = <
 &none       &kp LCTRL    &kp C_AC_CUT            &kp RIGHT  &mt LALT UP      &kp ESC       &none               &kp LALT          &none      &kp C_AC_PASTE  &kp RCTRL      &kp ESC
-&kp LCTRL   &lt 8 HOME   &mt LSHIFT PRINTSCREEN  &mo 8      &kp LCTRL        &mt RALT DEL  &mt RALT BACKSPACE  &mt RCTRL DOWN    &lt 8 END  &mt RSHIFT TAB  &none          &kp RCTRL
+&kp LCTRL   &lt 7 HOME   &mt LSHIFT PRINTSCREEN  &mo 7      &kp LCTRL        &mt RALT DEL  &mt RALT BACKSPACE  &mt RCTRL DOWN    &lt 7 END  &mt RSHIFT TAB  &none          &kp RCTRL
 &kp LSHIFT  &key_repeat  &none                   &none      &kp PG_DN        &kp LEFT      &none               &kp RET           &none      &key_repeat     &kp C_AC_UNDO  &mt RSHIFT LS(RSHIFT)
                                                  &kp LGUI   &ktt LALT LSHFT  &kp RALT      &kp RALT            &ktt LALT RSHIFT  &kp RGUI
             >;
@@ -312,10 +303,10 @@
 
         qwerty_shortcuts_m {
             bindings = <
-&none       &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none              &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                   &none           &kp RCTRL      &none
-&kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 10 SCROLLLOCK  &kp LCTRL              &mt RALT C_BRI_DEC  &kp RALT  &mt RCTRL KP_NUM       &lt 10 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
-&kp LSHIFT  &none               &kp C_MENU                  &kp CAPS           &kp PG_UP              &kp C_BRI_INC       &none     &kp C_MUTE             &none                   &none           &kp C_AC_REDO  &kp RSHIFT
-                                                            &kp LGUI           &mt LALT C_PLAY_PAUSE  &kp RALT            &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
+&none       &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none             &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                  &none           &kp RCTRL      &none
+&kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 9 SCROLLLOCK  &kp LCTRL              &mt RALT C_BRI_DEC  &kp RALT  &mt RCTRL KP_NUM       &lt 9 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
+&kp LSHIFT  &none               &kp C_MENU                  &kp CAPS          &kp PG_UP              &kp C_BRI_INC       &none     &kp C_MUTE             &none                  &none           &kp C_AC_REDO  &kp RSHIFT
+                                                            &kp LGUI          &mt LALT C_PLAY_PAUSE  &kp RALT            &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
             >;
         };
 
@@ -330,10 +321,10 @@
 
         service {
             bindings = <
-&mo 12  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &mo 12
+&mo 11  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &mo 11
 &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none   &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
-                                      &none          &mo 12         &none          &none          &mo 12         &none
+                                      &none          &mo 11         &none          &none          &mo 11         &none
             >;
         };
 
