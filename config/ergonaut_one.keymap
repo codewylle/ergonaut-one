@@ -303,7 +303,7 @@
 
         qwerty_shortcuts_m {
             bindings = <
-&none       &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none             &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                  &none           &kp RCTRL      &none
+&kp C_NEXT  &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none             &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                  &none           &kp RCTRL      &kp C_PREV
 &kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 9 SCROLLLOCK  &kp LCTRL              &mt RALT C_BRI_DEC  &kp RALT  &mt RCTRL KP_NUM       &lt 9 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
 &kp LSHIFT  &none               &kp C_MENU                  &kp CAPS          &kp PG_UP              &kp C_BRI_INC       &none     &kp C_MUTE             &none                  &none           &kp C_AC_REDO  &kp RSHIFT
                                                             &kp LGUI          &mt LALT C_PLAY_PAUSE  &kp RALT            &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
@@ -312,10 +312,10 @@
 
         qwerty_shortcuts_m_pushed {
             bindings = <
-&trans  &kp LCTRL  &none              &none     &kp LALT         &trans              &trans    &kp LALT          &none   &none       &kp RCTRL      &trans
-&trans  &none      &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &mt RALT C_BRI_INC  &kp RALT  &mt RCTRL C_MUTE  &none   &kp RSHIFT  &kp C_AC_REDO  &trans
-&trans  &trans     &trans             &trans    &trans           &trans              &trans    &trans            &trans  &trans      &trans         &trans
-                                      &trans    &trans           &trans              &trans    &trans            &trans
+&trans  &kp LCTRL  &none              &kp C_NEXT  &kp LALT         &trans              &trans    &kp LALT          &kp C_PREV  &none       &kp RCTRL      &trans
+&trans  &none      &mt LSHIFT C_MENU  &kp CAPS    &mt LCTRL PG_UP  &mt RALT C_BRI_INC  &kp RALT  &mt RCTRL C_MUTE  &none       &kp RSHIFT  &kp C_AC_REDO  &trans
+&trans  &trans     &trans             &trans      &trans           &trans              &trans    &trans            &trans      &trans      &trans         &trans
+                                      &trans      &trans           &trans              &trans    &trans            &trans
             >;
         };
 
