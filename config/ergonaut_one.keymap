@@ -46,6 +46,28 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        btt: bluetooth_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Bluetooth Tap";
+            bindings = <&kp>, <&bt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        btlt: bluetooth_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Bluetooth Layer Tap";
+            bindings = <&mo>, <&bt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -196,6 +218,12 @@
             timeout-ms = <200>;
             layers = <0>;
         };
+
+        alt_gui {
+            bindings = <&kp LGUI>;
+            key-positions = <37 40>;
+            timeout-ms = <100>;
+        };
     };
 
     keymap {
@@ -203,8 +231,8 @@
 
         qwerty {
             bindings = <
-&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 5 W       &lt 5 E         &kp R           &kp T           &kp Y           &kp U           &lt 5 I         &lt 5 O       &mt RCTRL P      &kp LEFT_BRACKET
-&mt LCTRL GRAVE    &lt 3 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &kp G           &kp H           &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL APOSTROPHE
+&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 5 W       &lt 5 E         &mt LALT R      &kp T           &kp Y           &mt LALT U      &lt 5 I         &lt 5 O       &mt RCTRL P      &kp LEFT_BRACKET
+&mt LCTRL GRAVE    &lt 3 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &mt RALT G      &mt RALT H      &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 3 SEMICOLON  &mt RCTRL APOSTROPHE
 &mt LSHIFT TAB     &kp Z        &kp X         &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
                                               &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
             >;
@@ -212,10 +240,10 @@
 
         qwerty_pushed {
             bindings = <
-&trans         &mt LCTRL TAB  &lt 6 GRAVE   &lt 6 RIGHT_BRACKET  &kp T        &trans  &trans  &kp Y        &lt 6 LEFT_BRACKET  &lt 6 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
-&mt LCTRL TAB  &lt 4 Z        &mt LSHIFT X  &kp C                &mt LCTRL V  &kp B   &kp N   &mt RCTRL M  &kp COMMA           &mt RSHIFT DOT    &lt 4 SLASH          &mt RCTRL BACKSLASH
-&trans         &trans         &trans        &trans               &trans       &trans  &trans  &trans       &trans              &trans            &trans               &trans
-                                            &trans               &trans       &trans  &trans  &trans       &trans
+&trans  &mt LCTRL TAB  &lt 6 GRAVE   &lt 6 RIGHT_BRACKET  &mt LALT T   &trans      &trans      &mt LALT Y   &lt 6 LEFT_BRACKET  &lt 6 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
+&trans  &lt 4 Z        &mt LSHIFT X  &kp C                &mt LCTRL V  &mt RALT B  &mt RALT N  &mt RCTRL M  &kp COMMA           &mt RSHIFT DOT    &lt 4 SLASH          &trans
+&trans  &trans         &trans        &trans               &trans       &trans      &trans      &trans       &trans              &trans            &trans               &trans
+                                     &trans               &trans       &trans      &trans      &trans       &trans
             >;
         };
 
@@ -230,71 +258,71 @@
 
         numbers {
             bindings = <
-&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &kp F4        &kp F5  &kp F6  &kp F7        &kp F8         &kp F9         &mt RCTRL F10  &kp F11
-&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 4 N3  &mt LCTRL N4  &kp N5  &kp N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
-&kp LSHIFT       &trans        &trans         &trans    &trans        &trans  &trans  &trans        &trans         &trans         &trans         &kp RSHIFT
-                                              &trans    &trans        &trans  &trans  &trans        &trans
+&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &mt LALT F4   &kp F5       &kp F6       &mt LALT F7   &kp F8         &kp F9         &mt RCTRL F10  &kp F11
+&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 4 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
+&kp LSHIFT       &trans        &trans         &trans    &trans        &trans       &trans       &trans        &trans         &trans         &trans         &kp RSHIFT
+                                              &trans    &trans        &trans       &trans       &trans        &trans
             >;
         };
 
         numbers_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp EQUAL   &none   &mt LALT F5  &trans    &trans    &mt LALT F6  &none   &kp MINUS   &kp RCTRL  &trans
+&trans  &none      &kp LSHIFT  &none   &kp LCTRL    &kp RALT  &kp RALT  &kp RCTRL    &none   &kp RSHIFT  &trans     &trans
+&trans  &trans     &trans      &trans  &trans       &trans    &trans    &trans       &trans  &trans      &trans     &trans
+                               &trans  &trans       &trans    &trans    &trans       &trans
             >;
         };
 
         qwerty_shortcuts {
             bindings = <
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&mo 13  &none  &none  &mo 6  &mo 7  &none  &none  &mo 7  &mo 6  &none  &none  &mo 13
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                      &none  &mo 9  &none  &none  &mo 9  &none
+&none       &none   &none       &none  &kp LALT  &none     &none     &kp LALT  &none  &none       &none   &none
+&mo 13      &mo 13  &kp LSHIFT  &mo 6  &mo 7     &kp RALT  &kp RALT  &mo 7     &mo 6  &kp RSHIFT  &mo 13  &mo 13
+&kp LSHIFT  &none   &none       &none  &none     &none     &none     &none     &none  &none       &none   &kp RSHIFT
+                                &none  &mo 9     &none     &none     &mo 9     &none
             >;
         };
 
         qwerty_shortcuts_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &mo 8   &trans  &trans  &mo 8   &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &mo 10  &trans  &trans  &mo 10  &trans
+&trans  &none   &none       &none   &kp LALT  &trans    &trans    &kp LALT  &none   &none       &none   &trans
+&trans  &none   &kp LSHIFT  &none   &mo 8     &kp RALT  &kp RALT  &mo 8     &none   &kp RSHIFT  &none   &trans
+&trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans    &trans  &trans      &trans  &trans
+                            &trans  &mo 10    &trans    &trans    &mo 10    &trans
             >;
         };
 
         qwerty_shortcuts_c {
             bindings = <
-&none  &kp LCTRL    &kp C_AC_CUT            &kp RIGHT  &kp UP           &kp ESC   &none          &none             &none      &kp C_AC_PASTE  &kp RCTRL      &kp ESC
-&none  &lt 8 HOME   &mt LSHIFT PRINTSCREEN  &mo 8      &kp LCTRL        &kp DEL   &kp BACKSPACE  &mt RCTRL DOWN    &lt 8 END  &mt RSHIFT TAB  &none          &none
-&none  &key_repeat  &none                   &none      &kp PG_DN        &kp LEFT  &none          &kp RET           &none      &key_repeat     &kp C_AC_UNDO  &kp LS(RSHIFT)
-                                            &kp LGUI   &ktt LALT LSHFT  &kp RALT  &kp RALT       &ktt LALT RSHIFT  &kp RGUI
+&none       &kp LCTRL    &kp C_AC_CUT            &kp RIGHT  &mt LALT UP      &kp ESC       &none               &kp LALT          &none      &kp C_AC_PASTE  &kp RCTRL      &kp ESC
+&kp LCTRL   &lt 8 HOME   &mt LSHIFT PRINTSCREEN  &mo 8      &kp LCTRL        &mt RALT DEL  &mt RALT BACKSPACE  &mt RCTRL DOWN    &lt 8 END  &mt RSHIFT TAB  &none          &kp RCTRL
+&kp LSHIFT  &key_repeat  &none                   &none      &kp PG_DN        &kp LEFT      &none               &kp RET           &none      &key_repeat     &kp C_AC_UNDO  &mt RSHIFT LS(RSHIFT)
+                                                 &kp LGUI   &ktt LALT LSHFT  &kp RALT      &kp RALT            &ktt LALT RSHIFT  &kp RGUI
             >;
         };
 
         qwerty_shortcuts_c_pushed {
             bindings = <
-&trans  &trans  &trans      &trans  &kp ESC          &trans    &trans  &kp ESC        &trans  &trans      &mt RCTRL LS(RSHIFT)  &trans
-&trans  &trans  &kp LSHIFT  &trans  &mt LCTRL PG_DN  &kp LEFT  &trans  &mt RCTRL RET  &trans  &kp RSHIFT  &kp C_AC_UNDO         &kp LS(RSHIFT)
-&trans  &trans  &trans      &trans  &trans           &trans    &trans  &trans         &trans  &trans      &trans                &trans
-                            &trans  &trans           &trans    &trans  &trans         &trans
+&trans  &none   &none       &none   &mt LALT ESC     &trans         &trans    &mt LALT ESC   &none   &none       &mt RCTRL LS(RSHIFT)  &trans
+&trans  &none   &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt RALT LEFT  &kp RALT  &mt RCTRL RET  &none   &kp RSHIFT  &kp C_AC_UNDO         &trans
+&trans  &trans  &trans      &trans  &trans           &trans         &trans    &trans         &trans  &trans      &trans                &trans
+                            &trans  &trans           &trans         &trans    &trans         &trans
             >;
         };
 
         qwerty_shortcuts_m {
             bindings = <
-&none  &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none              &none                  &none          &none     &kp C_VOL_UP           &none                   &none           &kp RCTRL      &none
-&none  &none               &mt LSHIFT INTERNATIONAL_2  &lt 10 SCROLLLOCK  &kp LCTRL              &kp C_BRI_DEC  &none     &mt RCTRL KP_NUM       &lt 10 INTERNATIONAL_1  &mt RSHIFT INS  &none          &none
-&none  &none               &kp C_MENU                  &kp CAPS           &kp PG_UP              &kp C_BRI_INC  &none     &kp C_MUTE             &none                   &none           &kp C_AC_REDO  &none
-                                                       &kp LGUI           &mt LALT C_PLAY_PAUSE  &kp RALT       &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
+&none       &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none              &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                   &none           &kp RCTRL      &none
+&kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 10 SCROLLLOCK  &kp LCTRL              &mt RALT C_BRI_DEC  &kp RALT  &mt RCTRL KP_NUM       &lt 10 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
+&kp LSHIFT  &none               &kp C_MENU                  &kp CAPS           &kp PG_UP              &kp C_BRI_INC       &none     &kp C_MUTE             &none                   &none           &kp C_AC_REDO  &kp RSHIFT
+                                                            &kp LGUI           &mt LALT C_PLAY_PAUSE  &kp RALT            &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
             >;
         };
 
         qwerty_shortcuts_m_pushed {
             bindings = <
-&trans  &trans  &trans             &trans    &trans           &trans        &trans  &trans            &trans  &trans      &trans         &trans
-&trans  &trans  &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &kp C_BRI_UP  &trans  &mt RCTRL C_MUTE  &trans  &kp RSHIFT  &kp C_AC_REDO  &trans
+&trans  &none   &none              &none     &none            &trans        &trans  &none             &none   &none       &none          &trans
+&trans  &none   &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &kp C_BRI_UP  &none   &mt RCTRL C_MUTE  &none   &kp RSHIFT  &kp C_AC_REDO  &trans
 &trans  &trans  &trans             &trans    &trans           &trans        &trans  &trans            &trans  &trans      &trans         &trans
                                    &trans    &trans           &trans        &trans  &trans            &trans
             >;
