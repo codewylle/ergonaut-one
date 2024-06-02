@@ -258,10 +258,10 @@
 
         numbers_pushed {
             bindings = <
-&trans  &kp LCTRL  &kp EQUAL   &none   &mt LALT F5  &trans    &trans    &mt LALT F6  &none   &kp MINUS   &kp RCTRL  &trans
-&trans  &none      &kp LSHIFT  &none   &kp LCTRL    &kp RALT  &kp RALT  &kp RCTRL    &none   &kp RSHIFT  &trans     &trans
-&trans  &trans     &trans      &trans  &trans       &trans    &trans    &trans       &trans  &trans      &trans     &trans
-                               &trans  &trans       &trans    &trans    &trans       &trans
+&trans  &kp LCTRL  &kp EQUAL   &kp F12  &mt LALT F5  &trans    &trans    &mt LALT F6  &kp F11  &kp MINUS   &kp RCTRL  &trans
+&trans  &none      &kp LSHIFT  &none    &kp LCTRL    &kp RALT  &kp RALT  &kp RCTRL    &none    &kp RSHIFT  &trans     &trans
+&trans  &trans     &trans      &trans   &trans       &trans    &trans    &trans       &trans   &trans      &trans     &trans
+                               &trans   &trans       &trans    &trans    &trans       &trans
             >;
         };
 
