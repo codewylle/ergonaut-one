@@ -249,9 +249,9 @@
 
         numbers {
             bindings = <
-&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &mt LALT F4   &kp F5       &kp F6       &mt LALT F7   &kp F8         &kp F9         &mt RCTRL F10  &kp F11
-&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 3 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &mt RSHIFT N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
-&kp LSHIFT       &trans        &trans         &trans    &trans        &trans       &trans       &trans        &trans         &trans         &trans         &kp RSHIFT
+&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &mt LALT F4   &kp F5       &kp F6       &mt LALT F7   &kp F8    &kp F9         &mt RCTRL F10  &kp F11
+&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 3 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &lt 3 N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
+&kp LSHIFT       &trans        &trans         &trans    &trans        &trans       &trans       &trans        &trans    &trans         &trans         &kp RSHIFT
                                               &trans    &trans        &trans       &trans       &trans        &trans
             >;
         };
