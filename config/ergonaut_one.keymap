@@ -93,13 +93,6 @@
             layers = <0>;
         };
 
-        change_lang_ru {
-            bindings = <&kp LS(RSHIFT)>;
-            key-positions = <4 7>;
-            timeout-ms = <100>;
-            layers = <0>;
-        };
-
         change_lang_ei {
             bindings = <&kp LS(RSHIFT)>;
             key-positions = <3 8>;
@@ -107,70 +100,56 @@
             layers = <0>;
         };
 
-        shortcuts_c_l3 {
+        shortcuts_c_l23 {
             bindings = <&mo 7>;
             key-positions = <3 16>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        shortcuts_c_r3 {
+        shortcuts_c_r23 {
             bindings = <&mo 7>;
             key-positions = <8 19>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        shortcuts_m_l3 {
+        shortcuts_m_l13 {
             bindings = <&mo 9>;
             key-positions = <3 37>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        pshortcuts_m_r3 {
+        pshortcuts_m_r13 {
             bindings = <&mo 9>;
             key-positions = <8 40>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        shortcuts_cm_l {
-            bindings = <&mo 11>;
-            key-positions = <3 16 37>;
-            layers = <0>;
-            timeout-ms = <200>;
-        };
-
-        shortcuts_cm_r {
-            bindings = <&mo 11>;
-            key-positions = <8 19 40>;
-            layers = <0>;
-            timeout-ms = <200>;
-        };
-
-        shortcuts_c_l4 {
+        shortcuts_c_l24 {
             bindings = <&mo 7>;
             key-positions = <16 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
-        shortcuts_c_r4 {
+        shortcuts_c_r24 {
             bindings = <&mo 7>;
             key-positions = <19 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
-        shortcuts_m_l4 {
+        shortcuts_m_l14 {
             bindings = <&mo 9>;
             key-positions = <37 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
-        shortcuts_m_r4 {
+        shortcuts_m_r14 {
             bindings = <&mo 9>;
             key-positions = <40 9>;
             timeout-ms = <200>;
@@ -191,38 +170,59 @@
             layers = <0>;
         };
 
-        shortcuts_cm_l4 {
-            bindings = <&mo 11>;
-            key-positions = <16 37 2>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_cm_r4 {
-            bindings = <&mo 11>;
-            key-positions = <19 40 9>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_cm_l45 {
-            bindings = <&mo 11>;
-            key-positions = <37 2 1>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_cm_r45 {
-            bindings = <&mo 11>;
-            key-positions = <40 9 10>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
         alt_gui {
             bindings = <&kp LGUI>;
             key-positions = <37 40>;
             timeout-ms = <100>;
+        };
+
+        shortcuts_m_l23 {
+            bindings = <&mo 9>;
+            key-positions = <3 4>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        pshortcuts_m_r23 {
+            bindings = <&mo 9>;
+            key-positions = <8 7>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        shortcuts_m_l24 {
+            bindings = <&mo 9>;
+            key-positions = <4 2>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        pshortcuts_m_r24 {
+            bindings = <&mo 9>;
+            key-positions = <7 9>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        shortcuts_c_l35 {
+            bindings = <&mo 7>;
+            key-positions = <1 3>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        shortcuts_c_r35 {
+            bindings = <&mo 7>;
+            key-positions = <10 8>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
+
+        change_lang_wo {
+            bindings = <&kp LS(RSHIFT)>;
+            key-positions = <2 9>;
+            timeout-ms = <100>;
+            layers = <0>;
         };
     };
 
@@ -276,19 +276,19 @@
 
         qwerty_shortcuts {
             bindings = <
-&none       &none   &none       &none  &kp LALT  &none     &none     &kp LALT  &none  &none       &none   &none
-&mo 13      &mo 13  &kp LSHIFT  &mo 6  &mo 7     &kp RALT  &kp RALT  &mo 7     &mo 6  &kp RSHIFT  &mo 13  &mo 13
-&kp LSHIFT  &none   &none       &none  &none     &none     &none     &none     &none  &none       &none   &kp RSHIFT
-                                &none  &mo 9     &none     &none     &mo 9     &none
+&none       &mo 7  &mo 11      &mo 11  &mo 9  &none     &none     &mo 9  &mo 11  &mo 11      &mo 7  &none
+&mo 11      &none  &kp LSHIFT  &mo 6   &mo 7  &kp RALT  &kp RALT  &mo 7  &mo 6   &kp RSHIFT  &none  &mo 11
+&kp LSHIFT  &none  &none       &none   &none  &none     &none     &none  &none   &none       &none  &kp RSHIFT
+                               &none   &mo 9  &none     &none     &mo 9  &none
             >;
         };
 
         qwerty_shortcuts_pushed {
             bindings = <
-&trans  &none   &none       &none   &kp LALT  &trans    &trans    &kp LALT  &none   &none       &none   &trans
-&trans  &none   &kp LSHIFT  &none   &mo 8     &kp RALT  &kp RALT  &mo 8     &none   &kp RSHIFT  &none   &trans
-&trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans    &trans  &trans      &trans  &trans
-                            &trans  &mo 10    &trans    &trans    &mo 10    &trans
+&trans  &mo 8   &none       &none   &mo 10  &trans    &trans    &mo 10  &none   &none       &mo 8   &trans
+&trans  &none   &kp LSHIFT  &none   &mo 8   &kp RALT  &kp RALT  &mo 8   &none   &kp RSHIFT  &none   &trans
+&trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans  &trans      &trans  &trans
+                            &trans  &mo 10  &trans    &trans    &mo 10  &trans
             >;
         };
 
@@ -303,10 +303,10 @@
 
         qwerty_shortcuts_c_pushed {
             bindings = <
-&trans  &none   &none       &none   &mt LALT ESC     &trans         &trans    &mt LALT ESC   &none   &none       &mt RCTRL LS(RSHIFT)  &trans
-&trans  &none   &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt RALT LEFT  &kp RALT  &mt RCTRL RET  &none   &kp RSHIFT  &kp C_AC_UNDO         &trans
-&trans  &trans  &trans      &trans  &trans           &trans         &trans    &trans         &trans  &trans      &trans                &trans
-                            &trans  &trans           &trans         &trans    &trans         &trans
+&trans  &kp LCTRL  &none       &none   &mt LALT ESC     &trans         &trans    &mt LALT ESC   &none   &none       &mt RCTRL LS(RSHIFT)  &trans
+&trans  &none      &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt RALT LEFT  &kp RALT  &mt RCTRL RET  &none   &kp RSHIFT  &kp C_AC_UNDO         &trans
+&trans  &trans     &trans      &trans  &trans           &trans         &trans    &trans         &trans  &trans      &trans                &trans
+                               &trans  &trans           &trans         &trans    &trans         &trans
             >;
         };
 
@@ -321,37 +321,19 @@
 
         qwerty_shortcuts_m_pushed {
             bindings = <
-&trans  &none   &none              &none     &none            &trans        &trans  &none             &none   &none       &none          &trans
-&trans  &none   &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &kp C_BRI_UP  &none   &mt RCTRL C_MUTE  &none   &kp RSHIFT  &kp C_AC_REDO  &trans
-&trans  &trans  &trans             &trans    &trans           &trans        &trans  &trans            &trans  &trans      &trans         &trans
-                                   &trans    &trans           &trans        &trans  &trans            &trans
-            >;
-        };
-
-        qwerty_shortcuts_c_m {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        qwerty_shortcuts_c_m_pushed {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &none              &none     &kp LALT         &trans              &trans    &kp LALT          &none   &none       &kp RCTRL      &trans
+&trans  &none      &mt LSHIFT C_MENU  &kp CAPS  &mt LCTRL PG_UP  &mt RALT C_BRI_INC  &kp RALT  &mt RCTRL C_MUTE  &none   &kp RSHIFT  &kp C_AC_REDO  &trans
+&trans  &trans     &trans             &trans    &trans           &trans              &trans    &trans            &trans  &trans      &trans         &trans
+                                      &trans    &trans           &trans              &trans    &trans            &trans
             >;
         };
 
         service {
             bindings = <
-&mo 14  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &mo 14
+&mo 12  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &mo 12
 &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none   &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
-                                      &none          &none          &none          &none          &none          &none
+                                      &none          &mo 12         &none          &none          &mo 12         &none
             >;
         };
 
