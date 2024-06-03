@@ -294,9 +294,9 @@
 
         qwerty_shortcuts_c_pushed {
             bindings = <
-&trans  &kp LCTRL  &none       &none   &mt LALT ESC     &trans         &trans    &mt LALT ESC   &none   &none       &mt RCTRL LS(RSHIFT)  &trans
-&trans  &none      &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt RALT LEFT  &kp RALT  &mt RCTRL RET  &none   &kp RSHIFT  &kp C_AC_UNDO         &trans
-&trans  &trans     &trans      &trans  &trans           &trans         &trans    &trans         &trans  &trans      &trans                &trans
+&trans  &kp LCTRL  &none       &none   &mt LALT ESC     &trans         &trans    &kp LALT       &kp ESC  &none       &mt RCTRL LS(RSHIFT)  &trans
+&trans  &none      &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt RALT LEFT  &kp RALT  &mt RCTRL RET  &none    &kp RSHIFT  &kp C_AC_UNDO         &trans
+&trans  &trans     &trans      &trans  &trans           &trans         &trans    &trans         &trans   &trans      &trans                &trans
                                &trans  &trans           &trans         &trans    &trans         &trans
             >;
         };
