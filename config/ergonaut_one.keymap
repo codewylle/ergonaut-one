@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -255,19 +255,19 @@
 
         numbers {
             bindings = <
-&kp F12          &mt LCTRL F1  &kp F2         &kp F3    &mt LALT F4   &kp F5       &kp F6       &mt LALT F7   &kp F8    &kp F9         &mt RCTRL F10  &kp F11
-&mt LCTRL EQUAL  &kp N1        &mt LSHIFT N2  &lt 3 N3  &mt LCTRL N4  &mt RALT N5  &mt RALT N6  &mt RCTRL N7  &lt 3 N8  &mt RSHIFT N9  &kp N0         &mt RCTRL MINUS
-&kp LSHIFT       &trans        &trans         &trans    &trans        &trans       &trans       &trans        &trans    &trans         &trans         &kp RSHIFT
-                                              &trans    &trans        &trans       &trans       &trans        &trans
+&kp RS(EQUAL)    &mt LCTRL RS(N1)  &kp RS(N2)     &kp RS(N3)  &mt LALT RS(N4)  &kp RS(N5)   &kp LS(N6)   &mt LALT LS(N7)  &kp LS(N8)  &kp LS(N9)     &mt RCTRL LS(N0)  &kp LS(MINUS)
+&mt LCTRL EQUAL  &kp N1            &mt LSHIFT N2  &lt 3 N3    &mt LCTRL N4     &mt RALT N5  &mt RALT N6  &mt RCTRL N7     &lt 3 N8    &mt RSHIFT N9  &kp N0            &mt RCTRL MINUS
+&mt LSHIFT F12   &kp F1            &kp F2         &kp F3      &kp F4           &kp F5       &kp F6       &kp F7           &kp F8      &kp F9         &kp F10           &mt RSHIFT F11
+                                                  &trans      &trans           &trans       &trans       &trans           &trans
             >;
         };
 
         numbers_pushed {
             bindings = <
-&trans  &kp LCTRL  &kp EQUAL   &kp F12  &mt LALT F5  &trans    &trans    &mt LALT F6  &kp F11  &kp MINUS   &kp RCTRL  &trans
-&trans  &none      &kp LSHIFT  &none    &kp LCTRL    &kp RALT  &kp RALT  &kp RCTRL    &none    &kp RSHIFT  &trans     &trans
-&trans  &trans     &trans      &trans   &trans       &trans    &trans    &trans       &trans   &trans      &trans     &trans
-                               &trans   &trans       &trans    &trans    &trans       &trans
+&trans  &mt LCTRL F12  &kp EQUAL      &kp RS(EQUAL)  &mt LALT RS(N5)  &trans       &trans       &mt LALT LS(N6)  &kp LS(MINUS)  &kp MINUS      &mt RCTRL F11  &trans
+&trans  &kp F1         &mt LSHIFT F2  &kp F3         &mt LCTRL F4     &mt RALT F5  &mt RALT F6  &mt RCTRL F7     &kp F8         &mt RSHIFT F9  &kp F10        &trans
+&trans  &trans         &trans         &trans         &trans           &trans       &trans       &trans           &trans         &trans         &trans         &trans
+                                      &trans         &trans           &trans       &trans       &trans           &trans
             >;
         };
 
