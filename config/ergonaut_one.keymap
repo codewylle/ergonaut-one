@@ -124,120 +124,64 @@
             layers = <0>;
         };
 
-        shortcuts_c_23l {
-            bindings = <&mo 6>;
-            key-positions = <3 16>;
-            layers = <0>;
-            timeout-ms = <200>;
-        };
-
-        shortcuts_c_23r {
-            bindings = <&mo 6>;
-            key-positions = <8 19>;
-            layers = <0>;
-            timeout-ms = <200>;
-        };
-
-        shortcuts_c_24l {
-            bindings = <&mo 6>;
-            key-positions = <16 2>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_c_24r {
-            bindings = <&mo 6>;
-            key-positions = <19 9>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_c_35l {
-            bindings = <&mo 6>;
-            key-positions = <1 3>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_c_35r {
-            bindings = <&mo 6>;
-            key-positions = <10 8>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_c_45l {
-            bindings = <&mo 6>;
-            key-positions = <2 1>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
-        shortcuts_c_45r {
-            bindings = <&mo 6>;
-            key-positions = <9 10>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
         shortcuts_m_13l {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <3 37>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
-        pshortcuts_m_13r {
-            bindings = <&mo 8>;
+        shortcuts_m_13r {
+            bindings = <&mo 6>;
             key-positions = <8 40>;
             layers = <0>;
             timeout-ms = <200>;
         };
 
         shortcuts_m_14l {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <37 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_14r {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <40 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_23l {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <3 4>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
-        pshortcuts_m_23r {
-            bindings = <&mo 8>;
+        shortcuts_m_23r {
+            bindings = <&mo 6>;
             key-positions = <8 7>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         shortcuts_m_24l {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <4 2>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         pshortcuts_m_24r {
-            bindings = <&mo 8>;
+            bindings = <&mo 6>;
             key-positions = <7 9>;
             timeout-ms = <200>;
             layers = <0>;
         };
 
         mouse {
-            bindings = <&mo 12>;
+            bindings = <&mo 8>;
             key-positions = <38 39>;
             timeout-ms = <100>;
         };
@@ -246,7 +190,7 @@
             bindings = <&mkp MCLK>;
             key-positions = <37 40>;
             timeout-ms = <100>;
-            layers = <12 13>;
+            layers = <8 9>;
         };
     };
 
@@ -264,7 +208,7 @@
 
         qwerty_pushed {
             bindings = <
-&trans  &mt LCTRL TAB  &lt 5 GRAVE   &lt 5 RIGHT_BRACKET  &mt LALT T   &trans      &trans      &mt LALT Y   &lt 5 LEFT_BRACKET  &lt 5 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
+&trans  &mt LCTRL TAB  &lt 0 GRAVE   &lt 0 RIGHT_BRACKET  &mt LALT T   &trans      &trans      &mt LALT Y   &lt 0 LEFT_BRACKET  &lt 0 APOSTROPHE  &mt RCTRL BACKSLASH  &trans
 &trans  &lt 3 Z        &mt LSHIFT X  &kp C                &mt LCTRL V  &mt LGUI B  &mt RGUI N  &mt RCTRL M  &kp COMMA           &mt RSHIFT DOT    &lt 3 SLASH          &trans
 &trans  &trans         &trans        &trans               &trans       &trans      &trans      &trans       &trans              &trans            &trans               &trans
                                      &trans               &trans       &trans      &trans      &trans       &trans
@@ -289,34 +233,16 @@
             >;
         };
 
-        qwerty_shortcuts {
+        colemak_shortcuts_c {
             bindings = <
-&none       &mo 6  &mo 12      &mo 12  &mo 8  &none     &none     &mo 8  &mo 12  &mo 12      &mo 6  &none
-&none       &none  &kp LSHIFT  &mo 5   &mo 6  &kp LGUI  &kp RGUI  &mo 6  &mo 5   &kp RSHIFT  &none  &none
-&kp LSHIFT  &none  &none       &none   &none  &none     &none     &none  &none   &none       &none  &kp RSHIFT
-                               &none   &mo 8  &none     &none     &mo 8  &none
+&none       &kp LCTRL    &lt 8 C_AC_CUT          &lt 8 RIGHT  &mt LALT UP      &kp ESC       &none               &kp LALT          &mo 8      &lt 8 C_AC_PASTE  &kp RCTRL      &kp ESC
+&kp LCTRL   &lt 5 HOME   &mt LSHIFT PRINTSCREEN  &mo 5        &kp LCTRL        &mt LGUI DEL  &mt RGUI BACKSPACE  &mt RCTRL DOWN    &lt 5 END  &mt RSHIFT TAB    &none          &kp RCTRL
+&kp LSHIFT  &key_repeat  &none                   &none        &kp PG_DN        &kp LEFT      &none               &kp RET           &none      &key_repeat       &kp C_AC_UNDO  &mt RSHIFT LS(RSHIFT)
+                                                 &kp LGUI     &ktt LALT LSHFT  &kp RALT      &kp RALT            &ktt LALT RSHIFT  &kp RGUI
             >;
         };
 
-        qwerty_shortcuts_pushed {
-            bindings = <
-&trans  &mo 7   &none       &none   &mo 9   &trans    &trans    &mo 9   &none   &none       &mo 7   &trans
-&trans  &none   &kp LSHIFT  &none   &mo 7   &kp LGUI  &kp RGUI  &mo 7   &none   &kp RSHIFT  &none   &trans
-&trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans  &trans      &trans  &trans
-                            &trans  &mo 9   &trans    &trans    &mo 9   &trans
-            >;
-        };
-
-        qwerty_shortcuts_c {
-            bindings = <
-&none       &kp LCTRL    &kp C_AC_CUT            &kp RIGHT  &mt LALT UP      &kp ESC       &none               &kp LALT          &none      &kp C_AC_PASTE  &kp RCTRL      &kp ESC
-&kp LCTRL   &lt 7 HOME   &mt LSHIFT PRINTSCREEN  &mo 7      &kp LCTRL        &mt LGUI DEL  &mt RGUI BACKSPACE  &mt RCTRL DOWN    &lt 7 END  &mt RSHIFT TAB  &none          &kp RCTRL
-&kp LSHIFT  &key_repeat  &none                   &none      &kp PG_DN        &kp LEFT      &none               &kp RET           &none      &key_repeat     &kp C_AC_UNDO  &mt RSHIFT LS(RSHIFT)
-                                                 &kp LGUI   &ktt LALT LSHFT  &kp RALT      &kp RALT            &ktt LALT RSHIFT  &kp RGUI
-            >;
-        };
-
-        qwerty_shortcuts_c_pushed {
+        colemak_shortcuts_c_pushed {
             bindings = <
 &trans  &kp LCTRL  &none       &none   &mt LALT ESC     &trans         &trans    &kp LALT       &kp ESC  &none       &mt RCTRL LS(RSHIFT)  &trans
 &trans  &none      &kp LSHIFT  &none   &mt LCTRL PG_DN  &mt LGUI LEFT  &kp RGUI  &mt RCTRL RET  &none    &kp RSHIFT  &kp C_AC_UNDO         &trans
@@ -325,21 +251,39 @@
             >;
         };
 
-        qwerty_shortcuts_m {
+        colemak_shortcuts_m {
             bindings = <
 &kp C_NEXT  &mt LCTRL C_VOL_DN  &kp C_AC_COPY               &none             &kp LALT               &none               &none     &mt LALT C_VOL_UP      &none                  &none           &kp RCTRL      &kp C_PREV
-&kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 9 SCROLLLOCK  &kp LCTRL              &mt LGUI C_BRI_DEC  &kp RGUI  &mt RCTRL KP_NUM       &lt 9 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
+&kp LCTRL   &none               &mt LSHIFT INTERNATIONAL_2  &lt 7 SCROLLLOCK  &kp LCTRL              &mt LGUI C_BRI_DEC  &kp RGUI  &mt RCTRL KP_NUM       &lt 7 INTERNATIONAL_1  &mt RSHIFT INS  &kp RGUI       &kp RCTRL
 &kp LSHIFT  &none               &kp C_MENU                  &kp CAPS          &kp PG_UP              &kp C_BRI_INC       &none     &kp C_MUTE             &none                  &none           &kp C_AC_REDO  &kp RSHIFT
                                                             &kp LGUI          &mt LALT C_PLAY_PAUSE  &kp RALT            &kp RALT  &mt LALT C_PLAY_PAUSE  &kp RGUI
             >;
         };
 
-        qwerty_shortcuts_m_pushed {
+        colemak_shortcuts_m_pushed {
             bindings = <
 &trans  &kp LCTRL  &none              &kp C_NEXT  &kp LALT         &trans              &trans    &kp LALT          &kp C_PREV  &none       &kp RCTRL      &trans
 &trans  &none      &mt LSHIFT C_MENU  &kp CAPS    &mt LCTRL PG_UP  &mt LGUI C_BRI_INC  &kp RGUI  &mt RCTRL C_MUTE  &none       &kp RSHIFT  &kp C_AC_REDO  &trans
 &trans  &trans     &trans             &trans      &trans           &trans              &trans    &trans            &trans      &trans      &trans         &trans
                                       &trans      &trans           &trans              &trans    &trans            &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&none       &mo 10  &none      &mmv MOVE_RIGHT  &mmv MOVE_UP    &none           &none           &mkp LCLK       &none            &none            &mo 10  &none
+&kp LCTRL   &none   &mkp RCLK  &mo 9            &none           &none           &msc SCRL_UP    &mmv MOVE_DOWN  &mo 9            &none            &none   &kp RCTRL
+&kp LSHIFT  &none   &none      &none            &msc SCRL_DOWN  &mmv MOVE_LEFT  &none           &mkp MCLK       &msc SCRL_LEFT   &msc SCRL_RIGHT  &none   &kp RSHIFT
+                               &mmv MOVE_UP     &mkp LCLK       &mmv MOVE_DOWN  &mmv MOVE_LEFT  &mkp RCLK       &mmv MOVE_RIGHT
+            >;
+        };
+
+        mouse_pushed {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
+                        &trans  &trans          &trans          &trans  &trans     &trans
             >;
         };
 
@@ -358,24 +302,6 @@
 &none  &bootloader  &sys_reset  &sys_reset      &none  &none        &none  &none  &sys_reset  &sys_reset  &bootloader  &none
 &none  &none        &none       &bt BT_CLR_ALL  &none  &bootloader  &none  &none  &none       &none       &none        &none
                                 &none           &none  &none        &none  &none  &none
-            >;
-        };
-
-        mouse {
-            bindings = <
-&trans  &mo 10  &trans     &mmv MOVE_RIGHT  &mmv MOVE_UP    &trans          &trans          &mkp LCLK       &trans           &trans           &mo 10  &trans
-&none   &trans  &mkp RCLK  &mo 13           &trans          &trans          &msc SCRL_UP    &mmv MOVE_DOWN  &mo 13           &trans           &trans  &none
-&trans  &trans  &trans     &trans           &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans          &mkp MCLK       &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans  &trans
-                           &mmv MOVE_UP     &mkp LCLK       &mmv MOVE_DOWN  &mmv MOVE_LEFT  &mkp RCLK       &mmv MOVE_RIGHT
-            >;
-        };
-
-        mouse_pushed {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans     &trans
             >;
         };
     };
