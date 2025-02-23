@@ -68,6 +68,17 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        mkplt: mouse_key_press_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "Mouse Key Press Layer Tap";
+        };
     };
 
     combos {
@@ -80,7 +91,7 @@
         };
 
         mouse_middle_click {
-            bindings = <&mkp MB3>;
+            bindings = <&mkp MCLK>;
             key-positions = <36 41>;
             timeout-ms = <100>;
         };
@@ -230,6 +241,13 @@
             key-positions = <38 39>;
             timeout-ms = <100>;
         };
+
+        mouse_middle_click_on_layer {
+            bindings = <&mkp MCLK>;
+            key-positions = <37 40>;
+            timeout-ms = <100>;
+            layers = <12 13>;
+        };
     };
 
     keymap {
@@ -237,10 +255,10 @@
 
         qwerty {
             bindings = <
-&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 4 W       &lt 4 E         &mt LALT R      &kp T           &kp Y           &mt LALT U      &lt 4 I         &lt 4 O       &mt RCTRL P      &kp LEFT_BRACKET
-&mt LCTRL GRAVE    &lt 2 A      &mt LSHIFT S  &lt 1 D         &mt LCTRL F     &mt LGUI G      &mt RGUI H      &mt RCTRL J     &lt 1 K         &mt RSHIFT L  &lt 2 SEMICOLON  &mt RCTRL APOSTROPHE
-&mt LSHIFT TAB     &kp Z        &kp X         &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
-                                              &mkpt LGUI MB1  &mt LALT SPACE  &mkpt RALT MB2  &mkpt RALT MB1  &mt LALT SPACE  &mkpt RGUI MB2
+&kp RIGHT_BRACKET  &mt LCTRL Q  &lt 4 W       &lt 4 E          &mt LALT R      &kp T            &kp Y            &mt LALT U      &lt 4 I          &lt 4 O       &mt RCTRL P      &kp LEFT_BRACKET
+&mt LCTRL GRAVE    &lt 2 A      &mt LSHIFT S  &lt 1 D          &mt LCTRL F     &mt LGUI G       &mt RGUI H       &mt RCTRL J     &lt 1 K          &mt RSHIFT L  &lt 2 SEMICOLON  &mt RCTRL APOSTROPHE
+&mt LSHIFT TAB     &kp Z        &kp X         &kp C            &kp V           &kp B            &kp N            &kp M           &kp COMMA        &kp DOT       &kp FSLH         &mt RSHIFT BACKSLASH
+                                              &mkpt LGUI LCLK  &mt LALT SPACE  &mkpt RALT RCLK  &mkpt RALT LCLK  &mt LALT SPACE  &mkpt RGUI RCLK
             >;
         };
 
@@ -273,8 +291,8 @@
 
         qwerty_shortcuts {
             bindings = <
-&none       &mo 6  &mo 10      &mo 10  &mo 8  &none     &none     &mo 8  &mo 10  &mo 10      &mo 6  &none
-&mo 10      &none  &kp LSHIFT  &mo 5   &mo 6  &kp LGUI  &kp RGUI  &mo 6  &mo 5   &kp RSHIFT  &none  &mo 10
+&none       &mo 6  &mo 12      &mo 12  &mo 8  &none     &none     &mo 8  &mo 12  &mo 12      &mo 6  &none
+&none       &none  &kp LSHIFT  &mo 5   &mo 6  &kp LGUI  &kp RGUI  &mo 6  &mo 5   &kp RSHIFT  &none  &none
 &kp LSHIFT  &none  &none       &none   &none  &none     &none     &none  &none   &none       &none  &kp RSHIFT
                                &none   &mo 8  &none     &none     &mo 8  &none
             >;
@@ -327,9 +345,9 @@
 
         service {
             bindings = <
-&mo 11  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &mo 11
+&none   &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
-&none   &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
+&mo 11  &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &mo 11
                                       &none          &mo 11         &none          &none          &mo 11         &none
             >;
         };
@@ -345,19 +363,19 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans    &mmv MOVE_RIGHT  &mmv MOVE_UP  &trans          &trans  &mkp MB1        &trans  &trans  &trans  &trans
-&trans  &trans  &mkp MB2  &mo 13           &trans        &trans          &trans  &mmv MOVE_DOWN  &mo 13  &trans  &trans  &trans
-&trans  &trans  &trans    &trans           &trans        &mmv MOVE_LEFT  &trans  &mkp MB3        &trans  &trans  &trans  &trans
-                          &trans           &trans        &trans          &trans  &trans          &trans
+&trans  &trans  &trans     &mmv MOVE_RIGHT  &mmv MOVE_UP    &trans          &trans        &mkp LCLK       &trans          &trans           &trans  &trans
+&mo 10  &trans  &mkp RCLK  &mo 13           &trans          &trans          &msc SCRL_UP  &mmv MOVE_DOWN  &mo 13          &trans           &trans  &mo 10
+&trans  &trans  &trans     &trans           &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans        &mkp MCLK       &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
+                           &trans           &mkplt 10 LCLK  &trans          &trans        &mkplt 10 RCLK  &trans
             >;
         };
 
         mouse_pushed {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &trans  &mkp MB3  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans          &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
+                        &trans  &trans          &trans          &trans  &trans     &trans
             >;
         };
     };
