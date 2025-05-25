@@ -190,7 +190,7 @@
             bindings = <&mkp MCLK>;
             key-positions = <37 40>;
             timeout-ms = <100>;
-            layers = <8 9>;
+            layers = <8>;
         };
     };
 
@@ -271,19 +271,10 @@
 
         mouse {
             bindings = <
-&none       &mo 10  &none      &mmv MOVE_RIGHT  &mmv MOVE_UP    &none           &none           &mkp LCLK       &none            &none            &mo 10  &none
-&kp LCTRL   &none   &mkp RCLK  &mo 9            &none           &none           &msc SCRL_UP    &mmv MOVE_DOWN  &mo 9            &none            &none   &kp RCTRL
-&kp LSHIFT  &none   &none      &none            &msc SCRL_DOWN  &mmv MOVE_LEFT  &none           &mkp MCLK       &msc SCRL_LEFT   &msc SCRL_RIGHT  &none   &kp RSHIFT
-                               &mmv MOVE_UP     &mkp LCLK       &mmv MOVE_DOWN  &mmv MOVE_LEFT  &mkp RCLK       &mmv MOVE_RIGHT
-            >;
-        };
-
-        mouse_pushed {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans     &trans          &trans           &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans     &trans
+&none       &msc SCRL_LEFT   &msc SCRL_UP    &mmv MOVE_UP    &mmv MOVE_LEFT   &none           &none           &mmv MOVE_LEFT   &mmv MOVE_UP     &msc SCRL_UP    &msc SCRL_LEFT   &none
+&kp LCTRL   &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkplt 9 MCLK   &mkplt 9 MCLK   &mmv MOVE_RIGHT  &mmv MOVE_DOWN   &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp RCTRL
+&kp LSHIFT  &none            &none           &none           &none            &none           &none           &none            &none            &none           &none            &kp RSHIFT
+                                             &mmv MOVE_UP    &mkp LCLK        &mmv MOVE_DOWN  &mmv MOVE_LEFT  &mkp RCLK        &mmv MOVE_RIGHT
             >;
         };
 
@@ -292,7 +283,7 @@
 &none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none
 &none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none
 &none  &none          &none          &bt BT_CLR     &none          &none          &none          &none          &none          &none          &none          &none
-                                     &none          &mo 11         &none          &none          &mo 11         &none
+                                     &none          &mo 10         &none          &none          &mo 10         &none
             >;
         };
 
